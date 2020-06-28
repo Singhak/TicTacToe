@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.86 ,
+    maximum-scale=3.0, minimum-scale=0.86"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="tictac.css" />
+    <script src="tictac.js"></script>
+  </head>
+
+  <body>
+    <div class="wraper">
+      <h1 class="header">Tic Tac Toe</h1>
+      <h3 class="header">
+        Frist Player: <span id="p1" style="color: brown;">🤩</span> Vs Second
+        Player:
+        <span id="p2" style="color: brown;">😄</span>
+      </h3>
+      <h3 class="header">
+        Game Status: <span id="gstatus" style="color: brown;">Start</span>
+      </h3>
+      <p class="header" id="turn">First Player Turn</p>
+      <section class="container">
+        <div id="1" class="block" onclick="onClick('1')">1</div>
+        <div id="2" class="block" onclick="onClick('2')">2</div>
+        <div id="3" class="block" onclick="onClick('3')">3</div>
+        <div id="4" class="block" onclick="onClick('4')">4</div>
+        <div id="5" class="block" onclick="onClick('5')">5</div>
+        <div id="6" class="block" onclick="onClick('6')">6</div>
+        <div id="7" class="block" onclick="onClick('7')">7</div>
+        <div id="8" class="block" onclick="onClick('8')">8</div>
+        <div id="9" class="block" onclick="onClick('9')">9</div>
+      </section>
+      <hr />
+      <div class="gbtn-grp">
+        <button class="btn-lg" onclick="resetGame()">Reset</button>
+        <button class="btn-lg" onclick="playMusic()">
+          &#x266B; <span id="music">Off</span>
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let music = new sound(
+      "Rock_Drum_Beat_A-105_Tempo_-_FesliyanStudios.com.mp3"
+    );
+    music.play();
+    let play = true;
+    function playMusic() {
+      if (play) {
+        music.stop();
+        play = false;
+        document.getElementById("music").innerHTML = "On";
+      } else {
+        music.play();
+        play = true;
+        document.getElementById("music").innerHTML = "Off";
+      }
+    }
+  </script>
+</html>

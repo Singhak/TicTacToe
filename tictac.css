@@ -1,0 +1,46 @@
+.block {
+  border: 2px solid blue;
+  border-radius: 16px;
+  background-color: lightgray;
+  margin: 1px;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 101px 101px 101px;
+  grid-template-columns: 101px 101px 101px;
+  text-align: center;
+}
+
+.wraper {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  text-align: center;
+  text-transform:capitalize;
+}
+
+.btn-lg {
+  width: 150px;
+  height: 40px;
+  background: mediumseagreen;
+  border: solid 1px mediumorchid;
+}
+
+.gbtn-grp {
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
+  }
